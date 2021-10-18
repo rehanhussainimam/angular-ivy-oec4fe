@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
 
+export interface tablevalue {
+  value: string;
+  isvisible?: boolean;
+}
+
 export interface user {
-  name: string;
-  age: string;
-  edu: string;
+  name: tablevalue;
+  age: tablevalue;
+  edu: tablevalue;
+  expand?: boolean;
 }
 
 @Component({
@@ -14,19 +20,22 @@ export interface user {
 export class AppComponent {
   public userdata: user[] = [
     {
-      name: 'Rehan',
-      age: '28',
-      edu: 'Maths',
+      name: { value: 'Rehan' },
+      age: { value: '28' },
+      edu: { value: 'Maths' },
+      expand: false,
     },
     {
-      name: 'Swami',
-      age: '30',
-      edu: 'Sciencee',
+      name: { value: 'Swami' },
+      age: { value: '30' },
+      edu: { value: 'Sciencee' },
+      expand: false,
     },
     {
-      name: 'Sunil',
-      age: '26',
-      edu: 'History',
+      name: { value: 'Sunil' },
+      age: { value: '26' },
+      edu: { value: 'History' },
+      expand: false,
     },
   ];
 
