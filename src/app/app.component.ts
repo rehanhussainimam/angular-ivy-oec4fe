@@ -9,7 +9,6 @@ export interface user {
   name: tablevalue;
   age: tablevalue;
   edu: tablevalue;
-  expand?: boolean;
 }
 
 @Component({
@@ -23,19 +22,16 @@ export class AppComponent {
       name: { value: 'Rehan' },
       age: { value: '28' },
       edu: { value: 'Maths' },
-      expand: false,
     },
     {
       name: { value: 'Swami' },
       age: { value: '30' },
       edu: { value: 'Sciencee' },
-      expand: false,
     },
     {
       name: { value: 'Sunil' },
       age: { value: '26' },
       edu: { value: 'History' },
-      expand: false,
     },
   ];
 
